@@ -1,5 +1,7 @@
 package com.gildair.weatherapp.presentation
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
@@ -10,6 +12,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
+@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun WeatherForecast(
     state: WeatherState,
@@ -22,7 +25,7 @@ fun WeatherForecast(
                 .padding(horizontal = 16.dp)
         ) {
             Text(
-                text = "Today",
+                text = "Hoje",
                 fontSize = 20.sp,
                 color = Color.White
             )
